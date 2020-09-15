@@ -9,7 +9,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class JdbiDatabaseTest {
-    Jdbi jdbi = Jdbi.create("jdbc:postgresql://localhost/spark_hbs_jdbi");
+    Jdbi jdbi = Jdbi.create("jdbc:postgresql://localhost/spark_hbs_jdbi?username=coder&password=codex123");
     @BeforeEach
     void beforeEach() {
         jdbi.withHandle(h -> {
