@@ -9,7 +9,7 @@ You can use this as a starting point for your Hackathon application.
 You can remove the current remote Git repository using this command.
 
 ```
-git remote remove -v
+git remote remove origin
 ```
 
 You can then link this to your own GitHub repository.
