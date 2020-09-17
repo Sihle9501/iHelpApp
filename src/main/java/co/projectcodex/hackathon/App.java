@@ -95,6 +95,38 @@ public class App {
                 return "";
             });
 
+            get("/student/:name", (req, res) -> {
+
+                Map<String, Object> map = new HashMap<>();
+                map.put("name", req.params("name"));
+                map.put("data", "[13, 7]");
+                map.put("theGraphLabel", "Student activities");
+                map.put("labels", "['Asked questions', 'Awaiting response']");
+
+                return new ModelAndView(map, "student.handlebars");
+            }, new HandlebarsTemplateEngine());
+
+            get("/teacher/:name", (req, res) -> {
+
+                Map<String, Object> map = new HashMap<>();
+                map.put("name", req.params("name"));
+                map.put("data", "[13, 7]");
+                map.put("theGraphLabel", "Teacher activities");
+                map.put("labels", "['Total answered', 'Answered in the last 8 days ']");
+                return new ModelAndView(map, "teacher.handlebars");
+            }, new HandlebarsTemplateEngine());
+
+            get("/subject/:name", (req, res) -> {
+
+                Map<String, Object> map = new HashMap<>();
+                map.put("name", req.params("name"));
+                map.put("data", "[13, 7]");
+                map.put("theGraphLabel", " ");
+                map.put("labels", "['Total answered', 'Answered in the last 8 days ']");
+                return new ModelAndView(map, "subjects.handlebars");
+            }, new HandlebarsTemplateEngine());
+
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }

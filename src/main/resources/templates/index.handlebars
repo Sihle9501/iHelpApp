@@ -1,79 +1,50 @@
 {{> header.handlebars}}
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>I-HELP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
 <body>
 
-<div class="container">
-    {{> menu.handlebars}}
+<div>
 
-    <div class="row">
-        <div class="col-6">
-            <h2>Add name</h2>
-            <form method="post" action="/person">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">First name</label>
-                    <input type="text" class="form-control {{firstNameInvalid}}" name="firstName">
-                    <small id="emailHelp" class="form-text text-muted">What does your friends call you</small>
-                    <div id="emailHelp" class="invalid-feedback">
-                        Please provide a valid name.
-                    </div>
-                </div>
+    <h1 class="bg-primary" style="margin-center:-25px;"> I-HELP </h1>
 
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Last name</label>
-                    <input type="text" class="form-control" name="lastName">
-                    <small id="emailHelp" class="form-text text-muted">What is ths name after the name your friends
-                        called you.</small>
-                </div>
-
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email</label>
-                    <input type="email" class="form-control" name="email">
-                    <small id="emailHelp" class="form-text text-muted">Where do we email you.</small>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-        <div class="col-6">
-            <h2>Names</h2>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>First name</th>
-                    <th>Last name</th>
-                    <th>Email</th>
-                </tr>
-                </thead>
-                {{#each people}}
-                    <tr>
-                        <td>{{firstName}}</td>
-                        <td>{{lastName}}</td>
-                        <td>{{email}}</td>
-                    </tr>
-                {{/each}}
-            </table>
-        </div>
-    </div>
-
-    <hr>
-
-    {{> footer.handlebars}}
-
-    <hr>
-
-    <div class="row" >
-
-        <div class="col-12" >
-            <h2>Links to UI libraries</h2>
-            <ul>
-                <li><a href="https://www.chartjs.org/"> chart.js </a></li>
-                <li><a href="https://getbootstrap.com/"> Bootstrap CSS </a></li>
-                <li><a href="https://getbootstrap.com/docs/4.5/examples/"> Bootstrap Templates </a></li>
-            </ul>
-        </div>
-    </div>
 
 </div>
+
+<div class="container bg-info d-flex align-items-center" >
+    <a href="#" class="btn btn-primary btn-lg btn-block" >Go</a>
+
+<!--    <form>-->
+<!--        <div class="form-group mt-6">-->
+<!--            <label for="exampleInputEmail1">username</label>-->
+<!--            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">-->
+<!--           &lt;!&ndash; <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>&ndash;&gt;-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for="exampleInputPassword1">Password</label>-->
+<!--            <input type="password" class="form-control" id="exampleInputPassword1">-->
+<!--        </div>-->
+<!--        <div class="form-group form-check">-->
+<!--            <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
+<!--            <label class="form-check-label" for="exampleCheck1">Forgot password</label>-->
+<!--        </div>-->
+<!--        <button type="login" class="btn btn-primary">Login</button>-->
+<!--        &lt;!&ndash;<button type="login" class="btn btn-primary">Sign Up</button>&ndash;&gt;-->
+<!--        &lt;!&ndash;<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">&ndash;&gt;-->
+<!--        <small id="emailHelp" class="form-text text-muted">Dont' have an account sign up here.</small>-->
+<!--    </form>-->
+
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 </body>
 </html>
