@@ -127,6 +127,29 @@ public class App {
             }, new HandlebarsTemplateEngine());
 
 
+            get("/askquestion", (req, res) -> {
+
+                Map<String, Object> map = new HashMap<>();
+               // map.put("name", req.params("name"));
+               // map.put("data", "[13, 7]");
+               // map.put("theGraphLabel", " ");
+               // map.put("labels", "['Total answered', 'Answered in the last 8 days ']");
+                return new ModelAndView(map, "askquestion.handlebars");
+            }, new HandlebarsTemplateEngine());
+         //   get("/ask/")
+            // answer a quetsion
+            get("/answerQuestion", (req, res) -> {
+
+                Map<String, Object> map = new HashMap<>();
+                // map.put("name", req.params("name"));
+                // map.put("data", "[13, 7]");
+                // map.put("theGraphLabel", " ");
+                // map.put("labels", "['Total answered', 'Answered in the last 8 days ']");
+                return new ModelAndView(map, "answerQuestion.handlebars");
+            }, new HandlebarsTemplateEngine());
+            //   get("/ask/")
+
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }
